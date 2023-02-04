@@ -1,5 +1,4 @@
-# Learn about your financial options here!
+# Learn how to becoome a rizzard
 
-### Launch your personal Finances: 
-# finHurt
+### 
 # InstaRizz
