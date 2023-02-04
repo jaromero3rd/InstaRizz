@@ -43,7 +43,7 @@ app.post('/', async (req, res) => {
       //n: 1, //controls the number of sub-completions generated
       frequency_penalty: 2, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
       presence_penalty: 1, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
-      stop: "END",
+      //stop: "END",
       });
       res.status(200).send({
         bot: response.data.choices[0].text
@@ -59,7 +59,7 @@ app.post('/', async (req, res) => {
 function isValidInput(userInput) {
   const capitalizedUserIn =
     userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
-  return "Tell me a creative and clever pickup lines for someone named ${capitalizedUserIn}\n\n###\n\n";
+  return `Tell me a creative and clever pickup lines for someone named ${capitalizedUserIn}\n\n###\n\n`;
 }
 
 
