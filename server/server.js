@@ -59,7 +59,7 @@ app.post('/', async (req, res) => {
 function isValidInput(userInput) {
   const capitalizedUserIn =
     userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
-  return `what is the funniest and clever pickup line for someone named ${capitalizedUserIn}`;
+  return `What is the funniest and clever pickup line for someone named ${capitalizedUserIn}\n`;
 }
 
 
