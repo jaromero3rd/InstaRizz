@@ -35,7 +35,7 @@ app.post('/', async (req, res) => {
       });
     } else {
       const response = await openai.createCompletion({
-      model: "Davinci:ft-finhelp-2023-02-03-00-07-40",
+      model: "davinci:ft-finhelp-2023-02-03-00-07-40",
       prompt: isValidInput(`${prompt}`), //`${prompt}`,
       temperature: 0.7, // Higher values means the model will take more risks.
       max_tokens: 256, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
