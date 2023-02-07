@@ -121,8 +121,9 @@ form.addEventListener('keyup', (e) => {
     }
 })
 form .addEventListener("focusout", (e)=> {
-    handleSubmit(e)
-    e.stopImmediatePropagation()
+    setTimeout(() => {
+        handleSubmit(e);
+      }, "1000")
 })
 
 form.addEventListener('submit', handleSubmit)
