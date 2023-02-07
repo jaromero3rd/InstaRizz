@@ -62,14 +62,14 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
+function verify(){
+
+}
+
+
 const handleSubmit = async (e) => {
-    // e.preventDefault()
-    if (formSubmitting) {
-        event.preventDefault();
-        return;
-      }
+    e.preventDefault()
     
-    formSubmitting = true;
 
     const data = new FormData(form)
 
@@ -118,36 +118,17 @@ const handleSubmit = async (e) => {
     }
 }
 
-// form.addEventListener('submit', handleSubmit)
-// form.addEventListener('keyup', (e) => {
-//     if (e.keyCode === 13) {
-//         handleSubmit(e)
-//     }
-// })
-// form .addEventListener("focusout", (e) => {
-//     console.log(e)
-//     if (e !== 'submit'){
-//         handleSubmit(e)
-//     }
-// })
-
-form.addEventListener('submit', handleSubmit);
-
+form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
-  if (e.keyCode === 13) {
-    handleSubmit(e);
-  }
-});
+    if (e.keyCode === 13) {
+        handleSubmit(e)
+    }
+})
+form .addEventListener("focusout", (e) => {
+    if (e != 'submit'){
+        handleSubmit(e)
+    }
+})
 
-form.addEventListener("focusout", (e) => {
-  console.log(e);
-  if (e !== 'submit') {
-    handleSubmit(e);
-  }
-});
 
-// Clear the formSubmitting flag after the form is successfully submitted
-form.addEventListener("ajax:complete", function () {
-  formSubmitting = false;
-});
 
