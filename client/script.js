@@ -118,4 +118,8 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
-form .addEventListener("focusout", handleSubmit)
+form .addEventListener("focusout", (e) => {
+    if (e !== 'submit'){
+        handleSubmit(e)
+    }
+})
