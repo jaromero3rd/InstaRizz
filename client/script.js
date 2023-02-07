@@ -118,17 +118,13 @@ const handleSubmit = async (e) => {
     }
 }
 
-form.addEventListener('submit', handleSubmit)
+form.addEventListener('submit' & "focusout", handleSubmit)
 form.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
         handleSubmit(e)
     }
 })
-form .addEventListener("focusout", (e) => {
-    if (e != 'submit'){
-        handleSubmit(e)
-    }
-})
+
 
 
 
