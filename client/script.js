@@ -62,9 +62,6 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
-function verify(){
-
-}
 
 
 const handleSubmit = async (e) => {
@@ -118,13 +115,17 @@ const handleSubmit = async (e) => {
     }
 }
 
-form.addEventListener('submit' & "focusout", handleSubmit)
 form.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
         handleSubmit(e)
     }
 })
+form .addEventListener("focusout", (e)=> {
+    handleSubmit(e)
+    e.stopImmediatePropagation()
+})
 
+form.addEventListener('submit', handleSubmit)
 
 
 
