@@ -64,7 +64,7 @@ function chatStripe(isAi, value, uniqueId) {
 
 
 
-const handleSubmit (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault()
     
 
@@ -117,16 +117,16 @@ const handleSubmit (e) => {
 
 form.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
-        handleSubmit(e)
+       await handleSubmit(e);
     }
 })
 form .addEventListener("focusout", (e)=> {
-    setTimeout(() => {
-        handleSubmit(e);
-      }, "1000")
+    await handleSubmit(e);
 })
 
-form.addEventListener('submit', handleSubmit)
+form.addEventListener('submit', (e)=> {
+    await handleSubmit(e);
+})
 
 
 
