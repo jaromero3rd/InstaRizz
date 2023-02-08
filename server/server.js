@@ -59,7 +59,14 @@ app.post('/', async (req, res) => {
 function isValidInput(userInput) {
   const capitalizedUserIn =
     userInput[0].toUpperCase() + userInput.slice(1).toLowerCase();
-  return `What is the funniest and clever pickup line for someone named ${capitalizedUserIn}\n`;
+  return `Q: What is the funniest and clever pickup line for someone named Izzy
+          A: Can I get busy with Izzy? END
+          Q: What is the funniest and clever pickup line for someone named Alexandra
+          A: You need to go out on a date with me right now. Alex-plain later END
+          Q: What is the funniest and clever pickup line for someone named Angel
+          A: Since you're Angel, do you mind if I say Halo? END
+          Q: What is the funniest and clever pickup line for someone named ${capitalizedUserIn}\n
+          A: `;
 }
 
 
