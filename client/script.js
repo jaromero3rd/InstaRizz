@@ -64,7 +64,7 @@ function chatStripe(isAi, value, uniqueId) {
 
 
 
-const handleSubmit {
+const handleSubmit = async (e) => {
     e.preventDefault()
     
 
@@ -89,7 +89,7 @@ const handleSubmit {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = fetch('https://instarizz.onrender.com', {
+    const response = await fetch('https://instarizz.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -115,16 +115,16 @@ const handleSubmit {
     }
 }
 
-form.addEventListener('keyup', (e) => {
+form.addEventListener('keyup', async (e) => {
     if (e.keyCode === 13) {
        await handleSubmit(e);
     }
 })
-form .addEventListener("focusout", (e)=> {
+form .addEventListener("focusout", async (e)=> {
     await handleSubmit(e);
 })
 
-form.addEventListener('submit', (e)=> {
+form.addEventListener('submit', async (e)=> {
     await handleSubmit(e);
 })
 
