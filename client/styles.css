@@ -11450,3 +11450,8 @@ form img {
   line-height: 2rem;
   font: white;
 }
+
+.page-section .page-section-heading-2 {
+  font-size: calc(90vw / 17);
+  line-height: calc(90vh / 11);
+}
