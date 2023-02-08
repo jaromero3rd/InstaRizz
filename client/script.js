@@ -3,6 +3,7 @@ import user from './assets/user.svg'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
+const subDeterminer = true;
 
 let loadInterval
 
@@ -113,8 +114,9 @@ const handleSubmit = async (e) => {
         messageDiv.innerHTML = "Something went wrong"
         alert(err)
     }
+    let subDeterminer = true;
 }
-const subDeterminer = true;
+
 form.addEventListener('keyup', async (e) => {
     if (e.keyCode === 13) {
        handleSubmit(e);
