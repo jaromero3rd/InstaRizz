@@ -490,6 +490,7 @@ progress {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  font: --bs-white;
 }
 
 .display-1 {
@@ -11448,7 +11449,7 @@ form img {
 .page-section .page-section-heading {
   font-size: 2.25rem;
   line-height: 2rem;
-  font: white;
+  font: --bs-white;
 }
 
 .page-section .page-section-heading-2 {
