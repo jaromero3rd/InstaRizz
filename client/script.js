@@ -89,15 +89,15 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://instarizz.onrender.com', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            prompt: data.get('prompt')
-        })
-    })
+    // const response = await fetch('https://instarizz.onrender.com', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //         prompt: data.get('prompt')
+    //     })
+    // })
 
     clearInterval(loadInterval)
     messageDiv.innerHTML = " "
@@ -114,14 +114,14 @@ const handleSubmit = async (e) => {
         alert(err)
     }
 }
-
+form .addEventListener("focusout", handleSubmit(e))
 form.addEventListener('keyup', async (e) => {
     if (e.keyCode === 13) {
        handleSubmit(e);
     }
 })
 form.addEventListener('submit', handleSubmit(e))
-form .addEventListener("focusout", handleSubmit(e))
+
 
 
 
