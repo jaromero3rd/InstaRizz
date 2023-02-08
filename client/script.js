@@ -129,15 +129,15 @@ form.addEventListener('submit', async (e) =>{
 form.addEventListener('focusin', async (e) =>{
     submitDeterminer = True  //in the keyboard of ios
 })
-form.addEventListener("focusout", async (e) => {
-    if (submitDeterminer === True){
-        setTimeout(handleSubmit,5000)
-        submitDeterminer = False
-    }
-    else{
-        e.preventDefault() 
-    }
-})
+// form.addEventListener("focusout", async (e) => {
+//     if (submitDeterminer === True){
+//         setTimeout(handleSubmit,5000)
+//         submitDeterminer = False
+//     }
+//     else{
+//         e.preventDefault() 
+//     }
+// })
 
 
 
