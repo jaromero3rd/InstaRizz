@@ -134,9 +134,9 @@ form.addEventListener('submit', async (e) => {
 })
 
 form.addEventListener("focusout", async (e) => {
-    if (submitDeterminer == true){
+    if (subDeterminer == true){
         handleSubmit(e);
-        let submitDeterminer = false;
+        let subDeterminer = false;
     }
     else{
         e.preventDefault();
