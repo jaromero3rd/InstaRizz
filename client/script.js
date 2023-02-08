@@ -124,9 +124,7 @@ form .addEventListener("focusout", async (e)=> {
     await handleSubmit(e);
 })
 
-form.addEventListener('submit', async (e)=> {
-    await handleSubmit(e);
-})
+form.addEventListener('submit', handleSubmit)
 
 
 
