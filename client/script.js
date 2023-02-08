@@ -115,7 +115,7 @@ const handleSubmit = async (e) => {
     }
 }
 
-let submitDeterminer = True
+// let submitDeterminer = True
 form.addEventListener('keyup', async (e) => {
     if (e.keyCode === 13) {
        handleSubmit(e);
