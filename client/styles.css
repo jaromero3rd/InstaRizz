@@ -11460,3 +11460,19 @@ form img {
   font-size: calc(90vw / 17);
   line-height: calc(90vh / 11);
 }
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
