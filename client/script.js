@@ -121,7 +121,7 @@ form.addEventListener('keyup', async (e) => {
     }
 })
 form.addEventListener('submit', async (e) => {
-    if (subDeterminer == false) {
+    if (subDeterminer == true) {
         handleSubmit(e);
         let subDeterminer = true;
     }
