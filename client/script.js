@@ -114,7 +114,6 @@ const handleSubmit = async (e) => {
         messageDiv.innerHTML = "Something went wrong"
         alert(err)
     }
-    let subDeterminer = true;
 }
 
 form.addEventListener('keyup', async (e) => {
