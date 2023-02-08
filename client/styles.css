@@ -11339,6 +11339,10 @@ body {
   display: none;
 }
 
+#team{
+  color:rgba(var(--bs-white-rgb), var(--bs-bg-opacity))
+}
+
 .wrapper {
   width: 100%;
   padding: 15px;
