@@ -120,9 +120,7 @@ form.addEventListener('keyup', async (e) => {
        await handleSubmit(e);
     }
 })
-form .addEventListener("focusout", async (e)=> {
-    await handleSubmit(e);
-})
+form .addEventListener("focusout", handleSubmit)
 
 form.addEventListener('submit', handleSubmit)
 
