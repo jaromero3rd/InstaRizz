@@ -115,14 +115,28 @@ const handleSubmit = async (e) => {
     }
 }
 
+const submitDeterminer = False
 form.addEventListener('keyup', async (e) => {
     if (e.keyCode === 13) {
        handleSubmit(e);
     }
 })
-form.addEventListener('submit', handleSubmit)
+form.addEventListener('submit', async (e) =>{
+    if (submitDeterminer === True){
+        submitDeterminer = False 
+        handleSubmit
+    }})
+form.addEventListener('focusin', async (e) =>{
+    submitDeterminer = True  //in the keyboard of ios
+})
 form.addEventListener("focusout", async (e) => {
-    setTimeout(handleSubmit,5000)
+    if (submitDeterminer === True){
+        setTimeout(handleSubmit,5000)
+        submitDeterminer = False
+    }
+    else{
+        e.preventDefault() 
+    }
 })
 
 
