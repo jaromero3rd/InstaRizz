@@ -64,7 +64,7 @@ function chatStripe(isAi, value, uniqueId) {
 
 
 
-const handleSubmit = async (e) => {
+const handleSubmit {
     e.preventDefault()
     
 
@@ -89,7 +89,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://instarizz.onrender.com', {
+    const response = fetch('https://instarizz.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
