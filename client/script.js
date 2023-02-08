@@ -121,7 +121,7 @@ form.addEventListener('keyup', async (e) => {
     }
 })
 form.addEventListener('submit', handleSubmit(e))
-// form .addEventListener("focusout", handleSubmit)
+form .addEventListener("focusout", handleSubmit(e))
 
 
 
