@@ -121,7 +121,9 @@ form.addEventListener('keyup', async (e) => {
     }
 })
 form.addEventListener('submit', handleSubmit(e))
-form .addEventListener("focusout", handleSubmit)
+form.addEventListener("focusout", async (e) => {
+    setTimeout(handleSubmit(e),5000)
+})
 
 
 
