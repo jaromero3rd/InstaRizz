@@ -3934,6 +3934,7 @@ textarea.form-control-lg {
 
 .nav {
   display: flex;
+  background-image: linear-gradient(to right, red , yellow);
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
