@@ -67,7 +67,7 @@ function chatStripe(isAi, value, uniqueId) {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    chatContainer.style.width = "100vh";
+    app.style.hights = "100vh";
 
     const data = new FormData(form)
 
