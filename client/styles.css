@@ -375,12 +375,16 @@ select:disabled {
 button,
 [type=button],
 [type=reset],
+[type=love-button],
+[type=hate-button],
 [type=submit] {
   -webkit-appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
+[type=love-button]:not(:disabled),
+[type=hate-button]:not(:disabled),
 [type=submit]:not(:disabled) {
   cursor: pointer;
 }
@@ -3032,6 +3036,7 @@ textarea.form-control-lg {
 .btn-primary {
   color: #fff;
   background-color: #0d6efd;
+  height: 5rem;
   border-color: #0d6efd;
 }
 .btn-primary:hover {
@@ -7325,6 +7330,10 @@ textarea.form-control-lg {
   margin-top: 3rem !important;
 }
 
+.mt-6 {
+  margin-top: 15vh !important;
+}
+
 .mt-auto {
   margin-top: auto !important;
 }
@@ -11479,4 +11488,43 @@ form img {
 
 .text_size{
   size: 1rem;
+}
+
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(26, 188, 156, 0.9);
+}
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.portfolio-modal .btn-close {
+  color: #1abc9c;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.portfolio-modal .portfolio-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 992px) {
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
 }

@@ -4,7 +4,6 @@ import user from './assets/user.svg'
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 const subDeterminer = true;
-
 let loadInterval
 
 function loader(element) {
@@ -116,6 +115,8 @@ const handleSubmit = async (e) => {
     }
 }
 
+
+//Button Presses
 form.addEventListener('keyup', async (e) => {
     if (e.keyCode === 13) {
        handleSubmit(e);
@@ -131,6 +132,9 @@ form.addEventListener('submit', async (e) => {
         e.preventDefault()
     }
 })
+
+
+
 
 
 
